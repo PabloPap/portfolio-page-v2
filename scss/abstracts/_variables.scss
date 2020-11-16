@@ -1,0 +1,26 @@
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+/// $base-url: 'http://cdn.example.com/assets/';
+
+$base-url: '/assets/' !default;
+
+// CARDS
+$card-color-header: #0d0d0d;
+$card-color-text: #404040;
+
+$card-color-btn-text: #3363ff;
+$card-color-btn-background: #e6ecff;
+
+// ANIMATIONS
+$transition-fast: 0.2s;

@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// This file contains the grid system of the site/application.
+// -----------------------------------------------------------------------------
+
+.container {
+  position: relative;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(phone) {
+    // @include global-paddings($padding-horizontal-phone);
+  }
+  @include respond(tablet) {
+    // @include global-paddings($padding-horizontal-tablet);
+  }
+  @include respond(laptop) {
+    // @include global-paddings($padding-horizontal-laptop);
+  }
+  @include respond(desktop) {
+    // @include global-paddings($padding-horizontal-desktop);
+  }
+}
+
+@supports (display: grid) {
+  .container {
+    display: grid;
+    // grid-template-rows: 60vh min-content 40vw repeat(2, min-content);
+    grid-template-rows: 70vh;
+    grid-auto-rows: auto;
+    grid-template-columns:
+      [full-start]
+      minmax(6rem, 1fr)
+      [center-start]
+      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  section {
+    grid-column: center-start / center-end;
+  }
+}

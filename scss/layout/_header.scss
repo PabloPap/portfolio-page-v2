@@ -1,0 +1,12 @@
+.header {
+  grid-column: full-start / full-end;
+  // padding: 5rem 0;
+  height: 100%;
+  background-color: beige;
+  text-align: center;
+
+  &__title {
+    width: 30rem;
+    margin: 0 auto;
+  }
+}

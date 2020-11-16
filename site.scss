@@ -1,0 +1,26 @@
+@import 'scss/abstracts/variables';
+@import 'scss/abstracts/mixins';
+
+@import 'scss/vendors/normalize';
+
+@import 'scss/base/typography';
+
+@import 'scss/layout/navigation';
+@import 'scss/layout/grid';
+@import 'scss/layout/header';
+@import 'scss/layout/footer';
+@import 'scss/layout/sidebar';
+@import 'scss/layout/forms';
+
+@import 'scss/components/buttons';
+@import 'scss/components/carousel';
+@import 'scss/components/cover';
+@import 'scss/components/dropdown';
+@import 'scss/components/cards';
+@import 'scss/components/gallery';
+
+@import 'scss/pages/home';
+@import 'scss/pages/contact';
+
+@import 'scss/themes/default';
+@import 'scss/themes/admin';
