@@ -1,36 +1,34 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-export default () => {
+const Header = () => {
   return (
-  <header>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-            <li>
-        <Link href="/projects">
-          <a>Projects</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/blog">
-          <a>Blog</a>
-        </Link>
-      </li>
-            <li>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </li>
-            <li>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
-      </li>
-    </ul>
-  </header>
-  )
-
+    <header className="header">
+      <nav className="header__nav">
+        <ul className="header__nav--list">
+          <li>
+            <Link href="/">
+              <a>Resume</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a>GitHub</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact">
+              <a>LinkedIn</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 };
+
+export default Header;

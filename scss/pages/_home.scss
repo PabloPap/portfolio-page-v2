@@ -1,7 +1,12 @@
-.home {
-  &__cards {
-    display: flex;
-    &--card {
-    }
-  }
+.hero {
+  grid-column: center-start / center-end;
+}
+
+.projects {
+  grid-column: center-start / center-end;
+}
+
+.about {
+  grid-column: center-start / center-end;
+  padding: 10rem 0;
 }

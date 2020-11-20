@@ -29,7 +29,6 @@
   .container {
     display: grid;
     // grid-template-rows: 60vh min-content 40vw repeat(2, min-content);
-    grid-template-rows: 70vh;
     grid-auto-rows: auto;
     grid-template-columns:
       [full-start]

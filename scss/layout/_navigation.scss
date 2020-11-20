@@ -1,0 +1,23 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  grid-column: full-start / full-end;
+  // padding: 5rem 0;
+  height: 18vh;
+  background-color: beige;
+  text-align: center;
+
+  &__title {
+    width: 30rem;
+    margin: 0 auto;
+  }
+  &__nav {
+    &--list {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      font-family: $font-montserrat;
+    }
+  }
+}
