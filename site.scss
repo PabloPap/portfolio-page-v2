@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Montserrat:wght@400;500&display=swap');
 
 @import 'scss/abstracts/variables';
 @import 'scss/abstracts/mixins';
@@ -10,9 +10,8 @@
 @import 'scss/layout/navigation';
 @import 'scss/layout/grid';
 @import 'scss/layout/footer';
-@import 'scss/layout/sidebar';
-@import 'scss/layout/forms';
 
+@import 'scss/components/composition';
 @import 'scss/components/buttons';
 @import 'scss/components/carousel';
 @import 'scss/components/cover';
@@ -21,7 +20,6 @@
 @import 'scss/components/gallery';
 
 @import 'scss/pages/home';
-@import 'scss/pages/contact';
 
 @import 'scss/themes/default';
 @import 'scss/themes/admin';

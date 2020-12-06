@@ -1,5 +1,60 @@
 .footer {
-  grid-column: full-start / full-end;
-  background-color: burlywood;
+  grid-column: center-start / center-end;
+  background-color: lightblue;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(big-laptop) {
+    padding: 12.5rem 0;
+  }
+
+  // padding: 11.25rem;
+  &__text {
+    font-family: $font-alata;
+    font-size: 2.2rem;
+    margin-top: 80px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @include respond(big-laptop) {
+      margin-top: 180px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+  }
+
+  &__connect {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    height: 250px;
+
+    @include respond(big-laptop) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      height: 160px;
+    }
+    &--links {
+      display: flex;
+      font-family: $font-montserrat;
+      font-size: 1.5rem;
+    }
+
+    &--line {
+      width: 1px;
+      height: 18px;
+      margin-right: 8px;
+      margin-left: 8px;
+      background-color: #b9b9b9;
+    }
+
+    &--social {
+      display: flex;
+      margin-top: 4rem;
+    }
+  }
 }

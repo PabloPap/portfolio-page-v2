@@ -2,11 +2,16 @@
   position: sticky;
   top: 0;
   width: 100%;
-  grid-column: full-start / full-end;
+  grid-column: center-start / center-end;
   // padding: 5rem 0;
-  height: 18vh;
+  height: 112px;
   background-color: beige;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 100;
 
   &__title {
     width: 30rem;
@@ -15,9 +20,12 @@
   &__nav {
     &--list {
       display: flex;
-      justify-content: flex-end;
       list-style-type: none;
       font-family: $font-montserrat;
+
+      li {
+        margin-left: 24px;
+      }
     }
   }
 }

@@ -28,17 +28,27 @@
 @supports (display: grid) {
   .container {
     display: grid;
-    // grid-template-rows: 60vh min-content 40vw repeat(2, min-content);
     grid-auto-rows: auto;
     grid-template-columns:
       [full-start]
-      minmax(6rem, 1fr)
+      minmax(2rem, 1fr)
       [center-start]
-      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-      [center-end] minmax(6rem, 1fr) [full-end];
-  }
+      repeat(8, [col-start] minmax(min-content, 11rem) [col-end])
+      [center-end] minmax(2rem, 1fr) [full-end];
 
-  section {
-    grid-column: center-start / center-end;
+    &__side {
+      // grid-column: full-start / center-start;
+      background-color: $gray-bg;
+      // position: relative;
+      // display: block;
+      height: 100%;
+
+      &--left {
+        background-color: $gray-bg;
+
+        grid-row: 4 / 5;
+        height: 100%;
+      }
+    }
   }
 }

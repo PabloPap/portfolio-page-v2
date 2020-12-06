@@ -5,6 +5,14 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin absolute($top, $left, $right, $bottom) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
 @mixin box-shadow($shadow...) {
   box-shadow: $shadow;
 }
@@ -14,24 +22,19 @@
   height: $height;
 }
 
-// @mixin global-paddings($padding, $left-abs: false) {
-//   @if $left-abs {
-//     left: $padding;
-//   }
-//   width: calc(100% - #{2 * $padding});
-// }
-
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:     Phone
-600 - 900px:   Tablet landscape
-900 - 1200px:  Tablet portrait
+600 - 900px:   Tablet landscape / Laptop
+992 - 1200px:  Tablet portrait / Laptop
 [1200 - 1800] is where our normal styles apply
 1800px + :     Big desktop
 $breakpoint argument choises
 - phone
-- tab-port
-- tab-land
+- tablet
+- laptop
+- big-laptop
+- desktop
 - big-desktop
 1em = 16px
 */
@@ -55,6 +58,14 @@ $breakpoint argument choises
       @content;
     }
   }
+
+  @if $breakpoint == big-laptop {
+    @media (min-width: 62em) {
+      //992px
+      @content;
+    }
+  }
+
   @if $breakpoint == desktop {
     @media (min-width: 75em) {
       //1200px

@@ -1,15 +1,17 @@
 const Footer = () => {
   return (
     <div className="footer">
+      <p className="footer__text">I'd love to hear from you</p>
       <div className="footer__connect">
-        <p className="footer__connect--text">I'd love to hear from you</p>
         <div className="footer__connect--links">
           <a href="">Email</a>
+          <div className="footer__connect--line"></div>
           <a href="">Connect on LinkedIn</a>
         </div>
-      </div>
-      <div className="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique atque.</p>
+        <div className="footer__connect--social">
+          <div>github</div>
+          <div>twitter</div>
+        </div>
       </div>
     </div>
   );
