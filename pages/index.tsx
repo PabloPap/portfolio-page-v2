@@ -1,11 +1,8 @@
-import Footer from '../components/footer';
-import Header from '../components/header';
 import Image from 'next/image';
 
 const Home = () => {
   return (
-    <div className="container">
-      <Header />
+    <>
       <div className="hero">
         <div className="hero__container">
           <h1 className="hero__container--par">
@@ -104,10 +101,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-
       {/* <div className="container__side"></div> */}
-      <Footer />
-    </div>
+    </>
   );
 };
 
