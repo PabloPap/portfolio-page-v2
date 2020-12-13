@@ -30,31 +30,65 @@ const Home = () => {
           </div>
         </div>
         <div className="projects__container">
-          <div className="projects__card">
-            <a href="#" className="grid-item">
-              <div className="projects__card--img"></div>
-              <div className="projects__card--hover"></div>
-              <div className="projects__card--name">iAQUA</div>
-            </a>
+          <div className="projects__container--column">
+            <div className="projects__card">
+              <a href="#">
+                <div className="projects__card--img"></div>
+                <div className="projects__card--hover"></div>
+                <div className="projects__card--name">iAQUA</div>
+              </a>
+            </div>
+            <div className="projects__descr">
+              <ul className="projects__descr--title">
+                <li>Front-end development contribution as part of EXEO team</li>
+              </ul>
+              <ul className="projects__descr--tags">
+                <li>Custom CMS</li>
+                <li>Microsoft ASP.NET</li>
+              </ul>
+            </div>
           </div>
-          <div className="projects__card">
-            <a href="#" className="grid-item">
-              <div className="projects__card--img"></div>
-              <div className="projects__card--hover"></div>
-              <div className="projects__card--name">Ecodev Orange</div>
-            </a>
+
+          <div className="projects__container--column">
+            <div className="projects__card">
+              <a href="#">
+                <div className="projects__card--img"></div>
+                <div className="projects__card--hover"></div>
+                <div className="projects__card--name">iAQUA</div>
+              </a>
+            </div>
+            <div className="projects__descr">
+              <ul className="projects__descr--title">
+                <li>Front-end development contribution as part of EXEO team</li>
+              </ul>
+              <ul className="projects__descr--tags">
+                <li>Custom CMS</li>
+                <li>Microsoft ASP.NET</li>
+              </ul>
+            </div>
           </div>
-          <div className="projects__card">
-            <a href="#" className="grid-item">
-              <div className="projects__card--img"></div>
-              <div className="projects__card--hover"></div>
-              <div className="projects__card--name">Ecodev Green</div>
-            </a>
+          <div className="projects__container--column">
+            <div className="projects__card">
+              <a href="#">
+                <div className="projects__card--img"></div>
+                <div className="projects__card--hover"></div>
+                <div className="projects__card--name">iAQUA</div>
+              </a>
+            </div>
+            <div className="projects__descr">
+              <ul className="projects__descr--title">
+                <li>Front-end development contribution as part of EXEO team</li>
+              </ul>
+              <ul className="projects__descr--tags">
+                <li>Custom CMS</li>
+                <li>Microsoft ASP.NET</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* <div className="container__side--left"></div> */}
+      <div className="container__side--left"></div>
 
       <div className="about">
         <div className="about__content">
@@ -101,7 +135,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div className="container__side"></div> */}
+      <div className="container__side"></div>
     </>
   );
 };

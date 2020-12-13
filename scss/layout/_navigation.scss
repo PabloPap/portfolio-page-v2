@@ -25,6 +25,13 @@
 
       li {
         margin-left: 24px;
+
+        a {
+          color: $color-bw--2;
+          &:hover {
+            color: $color-bw--7;
+          }
+        }
       }
     }
   }

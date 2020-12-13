@@ -38,13 +38,13 @@
 
     &__side {
       // grid-column: full-start / center-start;
-      background-color: $gray-bg;
+      background-color: $color-bw--1;
       // position: relative;
       // display: block;
       height: 100%;
 
       &--left {
-        background-color: $gray-bg;
+        background-color: $color-bw--1;
 
         grid-row: 4 / 5;
         height: 100%;

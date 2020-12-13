@@ -1,6 +1,5 @@
 .footer {
   grid-column: center-start / center-end;
-  background-color: lightblue;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -13,6 +12,7 @@
   &__text {
     font-family: $font-alata;
     font-size: 2.2rem;
+    color: $color-bw--6;
     margin-top: 80px;
     margin-bottom: 24px;
     text-align: center;
@@ -42,6 +42,13 @@
       display: flex;
       font-family: $font-montserrat;
       font-size: 1.5rem;
+
+      a {
+        color: $color-bw--2;
+        &:hover {
+          color: $color-bw--7;
+        }
+      }
     }
 
     &--line {
@@ -49,7 +56,7 @@
       height: 18px;
       margin-right: 8px;
       margin-left: 8px;
-      background-color: #b9b9b9;
+      background-color: $color-vertical-line;
     }
 
     &--social {
