@@ -1,0 +1,24 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="arrow-down">
+    <title></title>
+    <path d="M23.05 22a1 1 0 00-1.41 0L17 26.56V3a1 1 0 10-2 0v23.53L10.47 22a1 1 0 00-1.42 0 1 1 0 000 1.41l6.37 6.37a.9.9 0 001.27 0l6.36-6.37a1 1 0 000-1.41z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="arrow-left">
+    <title></title>
+    <path d="M10.1 23a1 1 0 000-1.41L5.5 17h23.55a1 1 0 000-2H5.53l4.57-4.57A1 1 0 008.68 9l-6.36 6.37a.9.9 0 000 1.27L8.68 23a1 1 0 001.42 0z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="arrow-right">
+    <title></title>
+    <path d="M22 9a1 1 0 000 1.42l4.6 4.6H3.06a1 1 0 100 2h23.52L22 21.59A1 1 0 0022 23a1 1 0 001.41 0l6.36-6.36a.88.88 0 000-1.27L23.42 9A1 1 0 0022 9z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="arrow-top">
+    <title></title>
+    <path d="M15.87 3l.26 26m-.26-26l5.04 3.95M15.87 3l-4.96 4.05"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="github">
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="twitter">
+    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+  </symbol>
+</svg>

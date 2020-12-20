@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/mobileHeader/burger.jsx", "components/header.jsx"  ],
   "exclude": [
     "node_modules"
   ]

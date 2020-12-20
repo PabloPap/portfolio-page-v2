@@ -9,8 +9,16 @@ const Footer = () => {
           <a href="">Connect on LinkedIn</a>
         </div>
         <div className="footer__connect--social">
-          <div>github</div>
-          <div>twitter</div>
+          <a href="https://github.com/PabloPap">
+            <svg>
+              <use xlinkHref="/img/sprite.svg#github" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/pixel_sniffer">
+            <svg>
+              <use xlinkHref="/img/sprite.svg#twitter" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

@@ -62,6 +62,26 @@
     &--social {
       display: flex;
       margin-top: 4rem;
+      @include respond(big-laptop) {
+        margin-top: 0;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: none;
+        stroke: $color-bw--2;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        &:hover {
+          stroke: $color-bw--7;
+        }
+
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
     }
   }
 }

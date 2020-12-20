@@ -1,6 +1,6 @@
 .hero {
   grid-column: center-start / center-end;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,7 @@
     // align-self: flex-start;
     // height: 100%;
     width: 100%;
-    margin-bottom: 12rem;
+    margin-bottom: 15rem;
     // margin-top: 5rem;
 
     @include respond(big-laptop) {
@@ -32,7 +32,7 @@
 
     &--links {
       display: flex;
-      margin-top: 5rem;
+      margin-top: 2rem;
       font-family: $font-montserrat;
       font-size: 1.6rem;
       font-weight: 500;
@@ -183,11 +183,8 @@
     // margin-right: 14px;
     // margin-bottom: 14px;
     transition: transform 0.14s ease-in, text-shadow 0.1s ease-in;
-
-    @include respond(phone) {
-      // height: 300px;
-      margin-bottom: 3rem;
-    }
+    margin-bottom: 3rem;
+    height: 300px;
 
     @include respond(big-laptop) {
       height: 500px;
@@ -356,25 +353,28 @@
 
 .about {
   grid-column: center-start / center-end;
-  padding: 5rem 0;
+  padding: 10rem 0;
   background-color: $color-bw--1;
 
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: min-content 1fr;
 
   @include respond(big-laptop) {
     padding: 12.5rem 0;
+    grid-template-rows: 1fr;
   }
 
   &__content {
     grid-column: 1 / 9;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
     text-align: center;
+    padding: 0 1rem;
 
     @include respond(big-laptop) {
       grid-column: 1 / 5;
+      padding: 0;
     }
     &--bold {
       font-family: $font-alata;
@@ -394,12 +394,14 @@
 
   &__images {
     grid-column: 2 / 8;
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
     align-self: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
 
     @include respond(big-laptop) {
       grid-column: 6 / 8;
+      margin: 0;
     }
   }
 }

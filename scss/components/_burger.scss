@@ -1,0 +1,21 @@
+.burger {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+
+  @include respond(laptop) {
+    display: none;
+  }
+
+  &__line {
+    width: 25px;
+    height: 3px;
+    background-color: $color-black;
+    border-radius: 10px;
+  }
+}
