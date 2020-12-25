@@ -14,6 +14,9 @@ const Burger = (props) => {
       <div className="burger__line"></div>
       <div className="burger__line"></div>
     </div>
+    // <div class="burger burger-squeeze">
+    //   <div class="burger-lines"></div>
+    //   </div>
   );
 };
 

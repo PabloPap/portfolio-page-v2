@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from '../../styles/Home.module.scss';
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
@@ -46,13 +45,20 @@ const Post: React.FC<{ post: Post }> = (props) => {
   }
 
   return (
-    <div className={styles.container}>
-      <Link href="/">
+    <>
+      {/* <Link href="/">
         <a>Go back</a>
-      </Link>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-    </div>
+      </Link> */}
+      <div className="hero">
+        <div className="hero__container">
+          <h1 className="hero__container--par">{post.title}</h1>
+        </div>
+      </div>
+      <div
+        className="blog"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      ></div>
+    </>
   );
 };
 

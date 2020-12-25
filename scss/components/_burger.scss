@@ -19,3 +19,43 @@
     border-radius: 10px;
   }
 }
+
+// .burger.burger-squeeze {
+//   .burger-lines {
+//     &,
+//     &:after,
+//     &:before {
+//       transition: 0.2s top 0.2s, 0.1s left, 0.2s transform,
+//         0.4s background-color 0.2s;
+//     }
+//     &:after,
+//     &:before {
+//       width: 2em;
+//     }
+//   }
+
+//   &.open {
+//     .burger-lines {
+//       &,
+//       &:after,
+//       &:before {
+//         transition: 0.2s background-color, 0.2s top, 0.2s left,
+//           0.2s transform 0.15s;
+//       }
+//       & {
+//         background-color: transparent;
+//       }
+//       &:before,
+//       &:after {
+//         left: 0.5em;
+//         top: 0px;
+//       }
+//       &:before {
+//         transform: rotate(-45deg);
+//       }
+//       &:after {
+//         transform: rotate(45deg);
+//       }
+//     }
+//   }
+// }
