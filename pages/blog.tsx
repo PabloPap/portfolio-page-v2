@@ -1,6 +1,5 @@
-import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
-import Header from '../components/header';
+import React from 'react';
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
@@ -15,7 +14,6 @@ async function getPosts() {
   ).then((res) => res.json());
 
   const posts = res.posts;
-
   return posts;
 }
 
@@ -30,23 +28,42 @@ const Blog: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props;
 
   return (
-    <>
-      < Header />
-      <div className={styles.container}>
-        <h1>hello to my blog</h1>
-        <ul>
-          {posts.map((post, index) => {
-            return (
-              <li key={index}>
-                <Link href="/post/[slug]" as={`/post/${post.slug}`}>
-                  <a>{post.title}</a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </>
+    <div className="blog">
+      <h1>Coming Soon</h1>
+    </div>
+    // <>
+    //   <div className="hero">
+    //     <div className="hero__container">
+    //       <h1 className="hero__container--par">
+    //         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+    //         reprehenderit inventore animi consectetur, explicabo nostrum
+    //         cupiditate esse.
+    //       </h1>
+    //       <div className="hero__container--links">
+    //         <a href="#">
+    //           <span>Browse projects</span>
+    //         </a>
+    //         <a href="#">
+    //           <span>A little about me</span>
+    //         </a>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <div className="blog">
+    //     <h1>hello to my blog</h1>
+    //     <ul>
+    //       {posts.map((post, index) => {
+    //         return (
+    //           <li key={index}>
+    //             <Link href="/post/[slug]" as={`/post/${post.slug}`}>
+    //               <a>{post.title}</a>
+    //             </Link>
+    //           </li>
+    //         );
+    //       })}
+    //     </ul>
+    //   </div>
+    // </>
   );
 };
 

@@ -13,10 +13,11 @@ function MyApp({ Component, pageProps }) {
         showUnder={800}
         style={{
           bottom: '90px',
-          right: '90px',
+          right: '70px',
           borderRadius: '50%',
           backgroundColor: '#fff',
           padding: '10px',
+          boxShadow: '1px 1px 10px 2px rgba(0, 0, 0, 0.1)',
         }}
       >
         <span className="scrollToTop">

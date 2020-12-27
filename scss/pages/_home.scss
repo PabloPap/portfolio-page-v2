@@ -1,25 +1,20 @@
 .hero {
   grid-column: center-start / center-end;
-  height: 100vh;
+  height: calc(100vh - 112px);
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  // width: 100%;
   &__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    // align-self: flex-start;
-    // height: 100%;
-    width: 100%;
-    margin-bottom: 15rem;
-    margin-top: 7rem;
+    width: 90%;
+    margin-bottom: 150px;
 
     @include respond(big-laptop) {
       width: 75%;
-      height: 95vh;
-      margin-top: -112px;
+      margin-bottom: 100px;
     }
 
     &--par {
@@ -32,9 +27,9 @@
 
     &--links {
       display: flex;
-      margin-top: 2rem;
+      margin-top: 1rem;
+      @include fluid-type(16px, 20px);
       font-family: $font-montserrat;
-      font-size: 1.6rem;
       font-weight: 500;
 
       a {
@@ -99,7 +94,7 @@
     margin-bottom: 6rem;
 
     h2 {
-      font-size: 29px;
+      @include fluid-type(29px, 36px);
       font-family: $font-alata;
       font-weight: 400;
       color: $color-bw--6;
@@ -124,7 +119,7 @@
       p,
       h3 {
         font-family: $font-montserrat;
-        font-size: 1.6rem;
+        @include fluid-type(16px, 18px);
         font-weight: 500;
         color: $color-bw--2;
         transition: color 250ms ease;
@@ -297,7 +292,7 @@
       list-style: none;
 
       li {
-        font-size: 18px;
+        @include fluid-type(18px, 21px);
         font-family: $font-alata;
         color: $color-bw--5;
       }
@@ -379,14 +374,14 @@
     }
     &--bold {
       font-family: $font-alata;
-      font-size: 2rem;
+      @include fluid-type(20px, 24px);
       line-height: 1.9;
       color: $color-bw--4;
     }
 
     &--thin {
       font-family: $font-montserrat;
-      font-size: 1.5rem;
+      @include fluid-type(15px, 20px);
       color: $color-bw--3;
       line-height: 1.8;
       margin-top: 2.2rem;

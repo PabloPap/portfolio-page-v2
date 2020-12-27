@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import Prism from 'prismjs';
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
@@ -44,6 +46,10 @@ const Post: React.FC<{ post: Post }> = (props) => {
     return <h1>Loading...</h1>;
   }
 
+  // useEffect(() => {
+  //   Prism.highlightAll();
+  // }, []);
+
   return (
     <>
       {/* <Link href="/">
@@ -55,7 +61,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
         </div>
       </div>
       <div
-        className="blog"
+        className="post"
         dangerouslySetInnerHTML={{ __html: post.html }}
       ></div>
     </>

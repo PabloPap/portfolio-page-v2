@@ -7,8 +7,7 @@ const Home = () => {
         <div className="hero__container">
           <h1 className="hero__container--par">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            reprehenderit inventore animi consectetur, explicabo nostrum
-            cupiditate esse.
+            reprehenderit inventore animi consectetur, explicabo nostrum cupidi.
           </h1>
           <div className="hero__container--links">
             <a href="#">

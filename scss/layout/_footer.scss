@@ -11,7 +11,7 @@
   // padding: 11.25rem;
   &__text {
     font-family: $font-alata;
-    font-size: 2.2rem;
+    @include fluid-type(22px, 26px);
     color: $color-bw--6;
     margin-top: 80px;
     margin-bottom: 24px;
@@ -41,7 +41,7 @@
     &--links {
       display: flex;
       font-family: $font-montserrat;
-      font-size: 1.5rem;
+      @include fluid-type(15px, 17px);
 
       a {
         color: $color-bw--2;
