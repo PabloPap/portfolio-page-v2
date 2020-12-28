@@ -54,7 +54,7 @@ const Blog: React.FC<{ posts: Post[] }> = (props) => {
         <ul>
           {posts.map((post, index) => {
             return (
-              <li key={index}>
+              <li key={post.slug}>
                 <Link href="/post/[slug]" as={`/post/${post.slug}`}>
                   <a>{post.title}</a>
                 </Link>
