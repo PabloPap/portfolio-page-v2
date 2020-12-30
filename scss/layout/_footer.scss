@@ -5,7 +5,9 @@
   flex-direction: column;
 
   @include respond(big-laptop) {
-    padding: 12.5rem 0;
+    // padding: 12.5rem 0;
+    // padding-top: 5rem;
+    margin-top: 2rem;
   }
 
   // padding: 11.25rem;
@@ -18,8 +20,8 @@
     text-align: center;
 
     @include respond(big-laptop) {
-      margin-top: 180px;
-      margin-bottom: 24px;
+      margin-top: 150px;
+      margin-bottom: 18px;
       text-align: left;
     }
   }

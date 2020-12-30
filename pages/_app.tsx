@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }) {
       <ScrollToTop
         showUnder={800}
         style={{
-          bottom: '90px',
-          right: '70px',
+          bottom: '180px',
+          right: '30px',
           borderRadius: '50%',
           backgroundColor: '#fff',
           padding: '10px',

@@ -1,28 +1,10 @@
-// -----------------------------------------------------------------------------
-// This file contains the grid system of the site/application.
-// -----------------------------------------------------------------------------
-
 .container {
   position: relative;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  @include respond(phone) {
-    // @include global-paddings($padding-horizontal-phone);
-  }
-  @include respond(tablet) {
-    // @include global-paddings($padding-horizontal-tablet);
-  }
-  @include respond(laptop) {
-    // @include global-paddings($padding-horizontal-laptop);
-  }
-  @include respond(desktop) {
-    // @include global-paddings($padding-horizontal-desktop);
-  }
 }
 
 @supports (display: grid) {
@@ -37,18 +19,31 @@
       [center-end] minmax(2rem, 1fr) [full-end];
 
     &__side {
-      // grid-column: full-start / center-start;
       background-color: $color-bw--1;
-      // position: relative;
-      // display: block;
       height: 100%;
 
-      &--left {
+      &--about {
         background-color: $color-bw--1;
 
         grid-row: 4 / 5;
         height: 100%;
       }
+
+      &--header {
+        background-color: $color-white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        grid-row: 1 / 2;
+        height: 100%;
+      }
+    }
+    &__side--white {
+      background-color: $color-white;
+      height: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
   }
 }
