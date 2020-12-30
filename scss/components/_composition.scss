@@ -6,6 +6,12 @@
     width: 33.33333333%;
     border-radius: 2px;
     box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    img {
+      width: 100%;
+      max-width: 15rem;
+      object-fit: cover;
+      display: block;
+    }
 
     @include respond(big-laptop) {
       width: 70%;
