@@ -1,4 +1,5 @@
 // import Image from 'next/image';
+import { Link } from 'react-scroll';
 
 const Home = () => {
   return (
@@ -10,17 +11,17 @@ const Home = () => {
             experience building websites and web applications.
           </h1>
           <div className="hero__container--links">
-            <a href="#">
+            <Link to="projects" smooth={true} duration={1000} offset={-100}>
               <span>Browse projects</span>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="about" smooth={true} duration={1000}>
               <span>Few words about me</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
-      <div className="projects">
+      <div className="projects" id="projects">
         <div className="projects__nav">
           <h2>Featured projects</h2>
           {/* <div className="projects__nav--icon">
@@ -92,7 +93,7 @@ const Home = () => {
 
       <div className="container__side--about"></div>
 
-      <div className="about">
+      <div className="about" id="about">
         <div className="about__content">
           <p className="about__content--bold">
             I'm a skilled and motivated professional who likes to code things

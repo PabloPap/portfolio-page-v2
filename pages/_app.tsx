@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
       <Footer />
       <ScrollToTop
         showUnder={800}
+        duration={500}
         style={{
           bottom: '180px',
           right: '30px',
@@ -20,9 +21,7 @@ function MyApp({ Component, pageProps }) {
           boxShadow: '1px 1px 10px 2px rgba(0, 0, 0, 0.1)',
         }}
       >
-        <span className="scrollToTop">
-          {/* <img src="/img/iconfinder_arrow-top_4115227.svg" alt="" /> */}
-        </span>
+        <span className="scrollToTop"></span>
       </ScrollToTop>
     </div>
   );
