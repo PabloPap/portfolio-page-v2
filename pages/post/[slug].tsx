@@ -55,9 +55,9 @@ const Post: React.FC<{ post: Post }> = (props) => {
       {/* <Link href="/">
         <a>Go back</a>
       </Link> */}
-      <div className="hero">
-        <div className="hero__container">
-          <h1 className="hero__container--par">{post.title}</h1>
+      <div className="post__hero">
+        <div className="post__hero--container">
+          <h1>{post.title}</h1>
         </div>
       </div>
       <div
