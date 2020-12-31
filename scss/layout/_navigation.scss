@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
   text-align: center;
   z-index: 1000;
 
@@ -11,6 +11,7 @@
   justify-content: flex-end;
 
   @include respond(laptop) {
+    grid-column: center-start / center-end;
   }
 
   &__title {
@@ -19,7 +20,7 @@
   }
   &__nav {
     margin: 0 auto;
-    display: flex;
+    display: block;
     width: 100%;
     background-color: $color-white;
 
@@ -34,10 +35,9 @@
       flex-flow: column nowrap;
       height: 100vh;
       width: 100vw;
+      max-width: 100%;
       justify-content: center;
       position: absolute;
-      // right: 50px;
-      left: -20px;
       top: 0;
       transform: translateY(-90%);
       transition: transform 0.5s ease-in;

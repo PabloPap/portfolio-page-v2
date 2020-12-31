@@ -45,6 +45,7 @@ const Header = () => {
               </Link>
             </li>
           </ul>
+
           <Burger onChangeOpenNav={changeOpenNav} />
         </nav>
       </header>
