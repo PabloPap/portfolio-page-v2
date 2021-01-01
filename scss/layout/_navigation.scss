@@ -23,6 +23,7 @@
     display: block;
     width: 100%;
     background-color: $color-white;
+    position: relative;
 
     @include respond(laptop) {
       justify-content: flex-end;

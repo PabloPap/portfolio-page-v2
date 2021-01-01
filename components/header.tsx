@@ -26,27 +26,30 @@ const Header = () => {
           <ul className={`header__nav--list ` + handleToggleClasses()}>
             <li>
               <Link href="/">
-                <a>Resume</a>
+                <a onClick={changeOpenNav}>Resume</a>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>Blog</a>
+                <a onClick={changeOpenNav}>Blog</a>
               </Link>
             </li>
             <li>
-              <Link href="/about">
-                <a>GitHub</a>
+              <Link href="https://github.com/PabloPap">
+                <a onClick={changeOpenNav}>GitHub</a>
               </Link>
             </li>
             <li>
-              <Link href="/contact">
-                <a>LinkedIn</a>
+              <Link href="https://www.linkedin.com/in/papadopoulospavlos/">
+                <a onClick={changeOpenNav}>LinkedIn</a>
               </Link>
             </li>
           </ul>
 
-          <Burger onChangeOpenNav={changeOpenNav} />
+          <Burger
+            onHandleToggleClasses={handleToggleClasses}
+            onChangeOpenNav={changeOpenNav}
+          />
         </nav>
       </header>
       <div className="container__side--white"></div>
