@@ -6,11 +6,13 @@ const { BLOG_URL, CONTENT_API_KEY } = process.env;
 type Post = {
   title: string;
   slug: string;
+  published_at: string;
+  custom_excerpt: string;
 };
 
 async function getPosts() {
   const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt`,
+    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,published_at`,
   ).then((res) => res.json());
 
   const posts = res.posts;
@@ -22,6 +24,16 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: { posts },
   };
+};
+
+const formatDate = (date: string) => {
+  let parseBlogDate = Date.parse(date);
+  let createDate = new Date(parseBlogDate);
+  let postDate = createDate.getDate();
+  let postMonth = createDate.toLocaleString('default', { month: 'short' });
+  let postYear = createDate.getFullYear();
+
+  return postMonth + ' ' + postDate + ', ' + postYear;
 };
 
 const Blog: React.FC<{ posts: Post[] }> = (props) => {
@@ -50,18 +62,32 @@ const Blog: React.FC<{ posts: Post[] }> = (props) => {
         </div>
       </div>
       <div className="blog">
-        <h1>hello to my blog</h1>
-        <ul>
-          {posts.map((post, index) => {
-            return (
-              <li key={post.slug}>
-                <Link href="/post/[slug]" as={`/post/${post.slug}`}>
-                  <a>{post.title}</a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        {posts.map((post, index) => {
+          return (
+            <Link href="/post/[slug]" as={`/post/${post.slug}`} key={post.slug}>
+              <a className="">
+                <ul className="blog__list">
+                  <li className="blog__post">
+                    <div className="blog__post--date">
+                      <h2>{formatDate(post.published_at)}</h2>
+                    </div>
+
+                    <div className="blog__post--title">
+                      {/* <Link href="/post/[slug]" as={`/post/${post.slug}`}>
+                        <a className="">{post.title}</a>
+                      </Link> */}
+                      <p> {post.title}</p>
+                    </div>
+
+                    <div className="blog__post--preview">
+                      <p>{post.custom_excerpt}</p>
+                    </div>
+                  </li>
+                </ul>
+              </a>
+            </Link>
+          );
+        })}
       </div>
     </>
   );
