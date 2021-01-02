@@ -104,7 +104,7 @@ const Home = () => {
             solutions.
           </p>
           <p className="about__content--thin">
-            I speak HTML / CSS / Javascript and use frameworks and tools based
+            I speak HTML / CSS / JavaScript and use frameworks and tools based
             on the project specifications. Always maintain updated knowledge of
             new trends and technology.
           </p>
