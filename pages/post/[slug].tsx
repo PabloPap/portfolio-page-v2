@@ -43,7 +43,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <h1>Loading...</h1>;
+    return <h1 className="spinner">Loading...</h1>;
   }
 
   // useEffect(() => {
@@ -52,10 +52,12 @@ const Post: React.FC<{ post: Post }> = (props) => {
 
   return (
     <>
-      {/* <Link href="/">
-        <a>Go back</a>
-      </Link> */}
       <div className="post__hero">
+        <Link href="/">
+          <a className="arrow">
+            <img src="/img/arrow-left.svg" alt="arrow left" />
+          </a>
+        </Link>
         <div className="post__hero--container">
           <h1>{post.title}</h1>
         </div>

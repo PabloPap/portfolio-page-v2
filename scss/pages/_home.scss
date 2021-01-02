@@ -14,21 +14,15 @@
     flex-direction: column;
     align-items: flex-start;
     width: 90%;
-    // margin-bottom: 150px;
     margin-bottom: 50px;
 
     @include respond(laptop) {
       width: 95%;
-      // margin-bottom: 100px;
       margin-bottom: 150px;
     }
 
     @include respond(big-laptop) {
       width: 70%;
-    }
-
-    @include respond(desktop) {
-      // width: 75%;
     }
 
     &--par {
@@ -41,14 +35,24 @@
 
     &--links {
       display: flex;
+      flex-direction: column;
       margin-top: 1rem;
       @include fluid-type(16px, 20px);
       font-family: $font-montserrat;
       font-weight: 500;
 
+      @include respond(tablet) {
+        flex-direction: row;
+      }
+
       a {
         &:not(:first-child) {
-          margin-left: 2rem;
+          margin-left: 0;
+          margin-top: 3rem;
+          @include respond(tablet) {
+            margin-left: 2rem;
+            margin-top: 0;
+          }
         }
         span {
           text-align: center;
@@ -92,10 +96,6 @@
 
 .projects {
   grid-column: center-start / center-end;
-  @include respond(big-laptop) {
-    // grid-template-rows: min-content 500px;
-  }
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -189,8 +189,6 @@
     align-items: stretch;
     justify-content: center;
     position: relative;
-    // margin-right: 14px;
-    // margin-bottom: 14px;
     transition: transform 0.14s ease-in, text-shadow 0.1s ease-in;
     margin-bottom: 3rem;
     height: 300px;
@@ -199,7 +197,6 @@
       height: 500px;
     }
 
-    // Pseudo elements ------------------
     &:before {
       content: '';
       visibility: hidden;
@@ -212,7 +209,6 @@
       opacity: 0;
     }
 
-    // CSS state ------------------------
     &:hover::before {
       visibility: visible;
       opacity: 1;

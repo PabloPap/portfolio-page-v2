@@ -41,7 +41,7 @@ const Home = () => {
             <div className="projects__descr">
               <ul className="projects__descr--title">
                 <li>
-                  A React App that a user interact with a datepicker to create
+                  A React app that a user interact with a datepicker to create
                   text cards based on dates
                 </li>
               </ul>
@@ -62,11 +62,14 @@ const Home = () => {
             </div>
             <div className="projects__descr">
               <ul className="projects__descr--title">
-                <li>Front-end development contribution as part of EXEO team</li>
+                <li>
+                  A React app that talks to the youtube API and returns videos
+                  based on user's search results
+                </li>
               </ul>
               <ul className="projects__descr--tags">
-                <li>Custom CMS</li>
-                <li>Microsoft ASP.NET</li>
+                <li>React.js</li>
+                <li>Youtube API</li>
               </ul>
             </div>
           </div>
@@ -83,8 +86,8 @@ const Home = () => {
                 <li>A sample layout for a landing page using CSS Grid</li>
               </ul>
               <ul className="projects__descr--tags">
-                <li>Custom CMS</li>
-                <li>Microsoft ASP.NET</li>
+                <li>Sass</li>
+                <li>CSS grid</li>
               </ul>
             </div>
           </div>

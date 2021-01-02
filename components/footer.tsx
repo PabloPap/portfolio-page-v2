@@ -4,7 +4,7 @@ const Footer = () => {
       <p className="footer__text">I'd love to hear from you</p>
       <div className="footer__connect">
         <div className="footer__connect--links">
-          <a href="">Email</a>
+          <a href="mailto:pavlospapadopou@gmail.com">Email</a>
           <div className="footer__connect--line"></div>
           <a href="https://www.linkedin.com/in/papadopoulospavlos/">
             Connect on LinkedIn

@@ -2,14 +2,11 @@
   position: relative;
 
   &__container {
-    // display: flex;
     width: 30px;
     height: 20px;
     position: absolute;
     top: 15px;
     right: 20px;
-    // justify-content: space-around;
-    // flex-flow: column nowrap;
     cursor: pointer;
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
@@ -49,14 +46,14 @@
       transition: 0.25s ease-in-out;
 
       &:nth-child(1) {
-        top: 0px; //0
+        top: 0px;
       }
       &:nth-child(2) {
-        top: 9px; //18
+        top: 9px;
       }
 
       &:nth-child(3) {
-        top: 18px; //36
+        top: 18px;
       }
     }
   }

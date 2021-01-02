@@ -1,15 +1,30 @@
 .blog {
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
   background-color: $color-bw--1;
-  padding-top: 1rem;
-  @include respond(big-laptop) {
-    // grid-template-rows: min-content 500px;
+  padding: 1rem 0;
+  @include respond(laptop) {
+    grid-column: center-start / center-end;
   }
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &__hero {
+    grid-column: center-start / center-end;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &--container {
+      h1 {
+        font-size: $font-h1-title;
+        font-family: $font-alata;
+        color: $color-bw--4;
+      }
+    }
+  }
 
   a {
     width: 100%;
@@ -20,12 +35,18 @@
     backface-visibility: hidden;
     padding: 0 2rem;
 
+    &:last-child > ul {
+      border-bottom: 2px solid $color-bw--3;
+    }
+
     &:hover {
-      .blog__list {
-        background-color: $color-white;
+      @include respond(laptop) {
+        .blog__list {
+          background-color: $color-white;
+        }
+        transform: translate3d(20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
       }
-      transform: translate3d(20px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     }
   }
 
@@ -43,30 +64,52 @@
     align-items: center;
     padding: 3rem 0;
     width: 100%;
-    border-top: 1px solid $color-bw--3;
+    border-top: 2px solid $color-bw--3;
 
-    // text-align: center;
     &--date {
       h2 {
         font-family: $font-alata;
         @include fluid-type(16px, 18px);
       }
       color: $color-bw--4;
-      width: 15rem;
+      width: 100%;
+      padding-bottom: 2rem;
+
+      @include respond(big-laptop) {
+        width: 15rem;
+        padding-bottom: 0;
+      }
     }
 
     &--title {
       @include fluid-type(28px, 36px);
       font-family: $font-alata;
       color: $color-bw--4;
-      width: 30rem;
+      width: 100%;
+      padding-bottom: 2rem;
+
+      @include respond(tablet) {
+        width: 50%;
+        padding-bottom: 0;
+      }
+      @include respond(big-laptop) {
+        width: 30rem;
+      }
     }
 
     &--preview {
       @include fluid-type(16px, 18px);
       color: $color-bw--3;
       font-family: $font-montserrat;
-      width: 20rem;
+      width: 100%;
+
+      @include respond(tablet) {
+        width: 50%;
+      }
+
+      @include respond(big-laptop) {
+        width: 20rem;
+      }
     }
   }
 }

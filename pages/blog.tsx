@@ -40,32 +40,22 @@ const Blog: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props;
 
   return (
-    // <div className="blog">
-    //   <h1>Coming Soon</h1>
-    // </div>
     <>
-      <div className="hero">
-        <div className="hero__container">
-          <h1 className="hero__container--par">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            reprehenderit inventore animi consectetur, explicabo nostrum
-            cupiditate esse.
-          </h1>
-          <div className="hero__container--links">
-            <a href="#">
-              <span>Browse projects</span>
-            </a>
-            <a href="#">
-              <span>A little about me</span>
-            </a>
-          </div>
+      <div className="blog__hero">
+        <Link href="/">
+          <a className="arrow">
+            <img src="/img/arrow-left.svg" alt="arrow left" />
+          </a>
+        </Link>
+        <div className="blog__hero--container">
+          <h1>A place for my stories</h1>
         </div>
       </div>
       <div className="blog">
         {posts.map((post, index) => {
           return (
             <Link href="/post/[slug]" as={`/post/${post.slug}`} key={post.slug}>
-              <a className="">
+              <a className="blog__link">
                 <ul className="blog__list">
                   <li className="blog__post">
                     <div className="blog__post--date">
@@ -73,9 +63,6 @@ const Blog: React.FC<{ posts: Post[] }> = (props) => {
                     </div>
 
                     <div className="blog__post--title">
-                      {/* <Link href="/post/[slug]" as={`/post/${post.slug}`}>
-                        <a className="">{post.title}</a>
-                      </Link> */}
                       <p> {post.title}</p>
                     </div>
 

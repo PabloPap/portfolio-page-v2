@@ -1,0 +1,14 @@
+.arrow {
+  img {
+    position: absolute;
+    top: 28px;
+    width: 40px;
+    z-index: 10000;
+    transform: translateY(-50%);
+
+    @include respond(laptop) {
+      top: 56px;
+      width: 50px;
+    }
+  }
+}
