@@ -45,9 +45,12 @@
     &__side--white {
       background-color: $color-white;
       height: 100%;
-      // position: sticky;
       top: 0;
       z-index: 1000;
+
+      @include respond(laptop) {
+        position: sticky;
+      }
     }
   }
 }
