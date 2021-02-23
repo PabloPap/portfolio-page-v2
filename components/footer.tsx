@@ -11,12 +11,12 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer__connect--social">
-          <a href="https://github.com/PabloPap">
+          <a aria-label="Twitter" href="https://github.com/PabloPap">
             <svg>
               <use xlinkHref="/img/sprite.svg#github" />
             </svg>
           </a>
-          <a href="https://twitter.com/pixel_sniffer">
+          <a aria-label="Github" href="https://twitter.com/pixel_sniffer">
             <svg>
               <use xlinkHref="/img/sprite.svg#twitter" />
             </svg>

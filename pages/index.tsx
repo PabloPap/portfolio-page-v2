@@ -32,7 +32,10 @@ const Home = () => {
         <div className="projects__container">
           <div className="projects__container--column">
             <div className="projects__card">
-              <a href="https://time-machine-app.herokuapp.com/">
+              <a
+                aria-label="project"
+                href="https://time-machine-app.herokuapp.com/"
+              >
                 <div className="projects__card--img one"></div>
                 <div className="projects__card--hover"></div>
                 <div className="projects__card--name">Time Machine</div>
@@ -54,7 +57,10 @@ const Home = () => {
 
           <div className="projects__container--column">
             <div className="projects__card">
-              <a href="https://video-finder-app.herokuapp.com/">
+              <a
+                aria-label="project"
+                href="https://video-finder-app.herokuapp.com/"
+              >
                 <div className="projects__card--img two"></div>
                 <div className="projects__card--hover"></div>
                 <div className="projects__card--name">Video Finder</div>
@@ -75,7 +81,7 @@ const Home = () => {
           </div>
           <div className="projects__container--column">
             <div className="projects__card">
-              <a href="https://glob-taste.netlify.app/">
+              <a aria-label="project" href="https://glob-taste.netlify.app/">
                 <div className="projects__card--img three"></div>
                 <div className="projects__card--hover"></div>
                 <div className="projects__card--name">Glob Taste</div>
