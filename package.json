@@ -11,6 +11,7 @@
     "babel-plugin-prismjs": "^2.0.1",
     "critters": "0.0.6",
     "next": "^10.0.3",
+    "next-seo": "^4.20.0",
     "prismjs": "^1.22.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",

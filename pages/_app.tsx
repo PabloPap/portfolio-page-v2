@@ -1,12 +1,15 @@
 import Footer from '../components/footer';
 import Header from '../components/header';
 import ScrollToTop from 'react-scroll-up';
+import { DefaultSeo } from 'next-seo';
+import SEO from '../next-seo.config';
 import '../site.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
     <div className="container">
       <Header />
+      <DefaultSeo {...SEO} />
       <Component {...pageProps} />
       <Footer />
       <ScrollToTop
