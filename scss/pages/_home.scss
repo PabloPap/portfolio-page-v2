@@ -230,21 +230,21 @@
             transparentize($color-black, 0.7),
             transparentize($color-black, 0.4)
           ),
-          url('/img/time-machine.png');
+          url('/img/orders.png');
       }
       &.two {
         background-image: radial-gradient(
             transparentize($color-black, 0.7),
             transparentize($color-black, 0.4)
           ),
-          url('/img/video-finder.png');
+          url('/img/time-machine.png');
       }
       &.three {
         background-image: radial-gradient(
             transparentize($color-black, 0.7),
             transparentize($color-black, 0.4)
           ),
-          url('/img/glob-taste.png');
+          url('/img/video-finder.png');
       }
     }
 
@@ -280,6 +280,7 @@
       transition: visibility 0.14s ease-out, opacity 0.14s ease-out,
         transform 0.24s ease;
       opacity: 0;
+      text-align: center;
     }
 
     a {

@@ -34,9 +34,37 @@ const Home = () => {
             <div className="projects__card">
               <a
                 aria-label="project"
-                href="https://time-machine-app.herokuapp.com/"
+                href="https://github.com/PabloPap/order-management-system"
               >
                 <div className="projects__card--img one"></div>
+                <div className="projects__card--hover"></div>
+                <div className="projects__card--name">
+                  Order management system
+                </div>
+              </a>
+            </div>
+            <div className="projects__descr">
+              <ul className="projects__descr--title">
+                <li>
+                  A tool that enables handling customer's orders, with actions
+                  like adding, deleting and editing
+                </li>
+              </ul>
+              <ul className="projects__descr--tags">
+                <li>React.js</li>
+                <li>Redux</li>
+                <li>Sass</li>
+                <li>Jest / Enzyme</li>
+              </ul>
+            </div>
+          </div>
+          <div className="projects__container--column">
+            <div className="projects__card">
+              <a
+                aria-label="project"
+                href="https://time-machine-app.herokuapp.com/"
+              >
+                <div className="projects__card--img two"></div>
                 <div className="projects__card--hover"></div>
                 <div className="projects__card--name">Time Machine</div>
               </a>
@@ -61,7 +89,7 @@ const Home = () => {
                 aria-label="project"
                 href="https://video-finder-app.herokuapp.com/"
               >
-                <div className="projects__card--img two"></div>
+                <div className="projects__card--img three"></div>
                 <div className="projects__card--hover"></div>
                 <div className="projects__card--name">Video Finder</div>
               </a>
@@ -79,7 +107,7 @@ const Home = () => {
               </ul>
             </div>
           </div>
-          <div className="projects__container--column">
+          {/* <div className="projects__container--column">
             <div className="projects__card">
               <a aria-label="project" href="https://glob-taste.netlify.app/">
                 <div className="projects__card--img three"></div>
@@ -96,7 +124,7 @@ const Home = () => {
                 <li>CSS grid</li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
