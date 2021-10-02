@@ -7,7 +7,7 @@ const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
 async function getPost(slug: string) {
   const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html`,
+    `${BLOG_URL}/ghost/api/v4/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html`,
   ).then((res) => res.json());
 
   const posts = res.posts;
@@ -53,7 +53,7 @@ const Post: React.FC<{ post: Post }> = (props) => {
   return (
     <>
       <div className="post__hero">
-        <Link href="/">
+        <Link href="/blog">
           <a className="arrow">
             <img src="/img/arrow-left.svg" alt="arrow left" />
           </a>
