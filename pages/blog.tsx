@@ -13,7 +13,7 @@ type Post = {
 
 async function getPosts() {
   const res = await fetch(
-    `${BLOG_URL}/ghost/api/v4/content/possts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,published_at`,
+    `${BLOG_URL}/ghost/api/v4/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,published_at`,
   )
     .then((res) => {
       if (!res.ok) {
