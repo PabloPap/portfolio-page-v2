@@ -14,18 +14,28 @@ type Post = {
 async function getPosts() {
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v4/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,published_at`,
-  )
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error('Could not fetch data');
-      }
-      return res.json();
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
+  );
+  const data = await res.json();
+  // .then((res) => {
+  //   if (!res.ok) {
+  //     throw new Error('Could not fetch data');
+  //   }
+  //   return res.json();
+  // })
+  // .catch((error) => {
+  //   console.log(error.message);
+  // });
+  if (!data) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+        // statusCode: 301
+      },
+    };
+  }
 
-  const posts = res.posts;
+  const posts = data.posts;
   return posts;
 }
 
