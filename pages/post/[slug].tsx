@@ -25,11 +25,10 @@ async function getPost(slug: string) {
 }
 
 // Ghost CMS request
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   const post = await getPost(params.slug);
   return {
     props: { post },
-    revalidate: 3,
   };
 };
 

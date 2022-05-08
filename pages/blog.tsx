@@ -39,11 +39,10 @@ async function getPosts() {
   return posts;
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   const posts = await getPosts();
   return {
     props: { posts },
-    revalidate: 3, // In seconds
   };
 };
 
