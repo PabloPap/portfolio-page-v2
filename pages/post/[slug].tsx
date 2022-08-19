@@ -8,24 +8,24 @@ const { BLOG_URL, CONTENT_API_KEY } = process.env;
 async function getPost(slug: string) {
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v4/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html`,
-  );
-  const data = await res.json();
+  )
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error('Could not fetch data');
+      }
+      return res.json();
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
 
-  if (!data) {
-    return {
-      redirect: {
-        destination: '/blog',
-        permanent: false,
-      },
-    };
-  }
+  const posts = res.posts;
 
-  const posts = data.posts;
   return posts[0];
 }
 
 // Ghost CMS request
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const post = await getPost(params.slug);
   return {
     props: { post },

@@ -14,32 +14,22 @@ type Post = {
 async function getPosts() {
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v4/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt,published_at`,
-  );
-  const data = await res.json();
-  // .then((res) => {
-  //   if (!res.ok) {
-  //     throw new Error('Could not fetch data');
-  //   }
-  //   return res.json();
-  // })
-  // .catch((error) => {
-  //   console.log(error.message);
-  // });
-  if (!data) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-        // statusCode: 301
-      },
-    };
-  }
+  )
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error('Could not fetch data');
+      }
+      return res.json();
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
 
-  const posts = data.posts;
+  const posts = res.posts;
   return posts;
 }
 
-export const getServerSideProps = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const posts = await getPosts();
   return {
     props: { posts },
@@ -58,8 +48,6 @@ const formatDate = (date: string) => {
 
 const Blog: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props;
-
-  // useEffect(() => {});
 
   return (
     <>
