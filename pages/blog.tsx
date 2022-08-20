@@ -48,7 +48,7 @@ const formatDate = (date: string) => {
 
 const Blog: React.FC<{ posts: Post[] }> = (props) => {
   const { posts } = props;
-
+  // add spinner on loading blog
   return (
     <>
       <div className="blog__hero">
