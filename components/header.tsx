@@ -25,7 +25,7 @@ const Header = () => {
         <nav className="header__nav">
           <ul className={`header__nav--list ` + handleToggleClasses()}>
             <li>
-              <Link href="/Pavlos-Papadopoulos-Resume-2021.pdf">
+              <Link href="/Pavlos-Papadopoulos-Resume-2022.pdf">
                 <a onClick={changeOpenNav}>Resume</a>
               </Link>
             </li>
