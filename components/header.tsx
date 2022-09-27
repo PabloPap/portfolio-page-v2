@@ -29,11 +29,11 @@ const Header = () => {
                 <a onClick={changeOpenNav}>Resume</a>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/blog">
                 <a onClick={changeOpenNav}>Blog</a>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="https://github.com/PabloPap">
                 <a onClick={changeOpenNav}>GitHub</a>
