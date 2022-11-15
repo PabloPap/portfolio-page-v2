@@ -1,4 +1,4 @@
-// import Image from 'next/image';
+import Image from 'next/image';
 import { Link } from 'react-scroll';
 
 const Home = () => {
@@ -145,35 +145,35 @@ const Home = () => {
         </div>
         <div className="about__images composition">
           <div className="composition__photo composition__photo--p1">
-            {/* <Image
+            <Image
               src="/img/office-large.png"
               layout="responsive"
               width={1000}
               height={667}
               alt="about me"
-            /> */}
-            <img src="/img/office.png" alt="about me" />
+            />
+            {/* <img src="/img/office.png" alt="about me" /> */}
           </div>
           <div className="composition__photo composition__photo--p2">
-            {/* <Image
+            <Image
               src="/img/coffee-large.png"
               layout="responsive"
               width={1000}
               height={667}
               alt="about me"
-            /> */}
-            <img src="/img/coffee.png" alt="about me" />
+            />
+            {/* <img src="/img/coffee.png" alt="about me" /> */}
           </div>
 
           <div className="composition__photo composition__photo--p3">
-            {/* <Image
+            <Image
               src="/img/ideas-large.png"
               layout="responsive"
               width={1000}
               height={667}
               alt="about me"
-            /> */}
-            <img src="/img/ideas.png" alt="about me" />
+            />
+            {/* <img src="/img/ideas.png" alt="about me" /> */}
           </div>
         </div>
       </div>
