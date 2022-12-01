@@ -1,82 +1,83 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import Prism from 'prismjs';
+// import Link from 'next/link';
+// import { useRouter } from 'next/router';
+// import { useEffect } from 'react';
+// import Prism from 'prismjs';
 
-const { BLOG_URL, CONTENT_API_KEY } = process.env;
+// const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
-async function getPost(slug: string) {
-  const res = await fetch(
-    `${BLOG_URL}/ghost/api/v4/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html`,
-  )
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error('Could not fetch data');
-      }
-      return res.json();
-    })
-    .catch((error) => {
-      console.log(error.message);
-    });
+// async function getPost(slug: string) {
+//   const res = await fetch(
+//     `${BLOG_URL}/ghost/api/v4/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html`,
+//   )
+//     .then((res) => {
+//       if (!res.ok) {
+//         throw new Error('Could not fetch data');
+//       }
+//       return res.json();
+//     })
+//     .catch((error) => {
+//       console.log(error.message);
+//     });
 
-  const posts = res.posts;
+//   const posts = res.posts;
 
-  return posts[0];
-}
+//   return posts[0];
+// }
 
-// Ghost CMS request
-export const getStaticProps = async ({ params }) => {
-  const post = await getPost(params.slug);
-  return {
-    props: { post },
-  };
-};
+// // Ghost CMS request
+// export const getStaticProps = async ({ params }) => {
+//   const post = await getPost(params.slug);
+//   return {
+//     props: { post },
+//   };
+// };
 
-export const getStaticPaths = () => {
-  // paths -> slugs which are allowed
-  return {
-    paths: [],
-    fallback: true,
-  };
-};
+// export const getStaticPaths = () => {
+//   // paths -> slugs which are allowed
+//   return {
+//     paths: [],
+//     fallback: true,
+//   };
+// };
 
-type Post = {
-  title: string;
-  html: string;
-  slug: string;
-};
+// type Post = {
+//   title: string;
+//   html: string;
+//   slug: string;
+// };
 
-const Post: React.FC<{ post: Post }> = (props) => {
-  const { post } = props;
+// const Post: React.FC<{ post: Post }> = (props) => {
+//   const { post } = props;
 
-  const router = useRouter();
+//   const router = useRouter();
 
-  if (router.isFallback) {
-    return <h1 className="spinner">Loading...</h1>;
-  }
+//   if (router.isFallback) {
+//     return <h1 className="spinner">Loading...</h1>;
+//   }
 
-  // useEffect(() => {
-  //   Prism.highlightAll();
-  // }, []);
+//   // useEffect(() => {
+//   //   Prism.highlightAll();
+//   // }, []);
 
-  return (
-    <>
-      <div className="post__hero">
-        <Link href="/blog">
-          <a className="arrow">
-            <img src="/img/arrow-left.svg" alt="arrow left" />
-          </a>
-        </Link>
-        <div className="post__hero--container">
-          <h1>{post.title}</h1>
-        </div>
-      </div>
-      <div
-        className="post"
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      ></div>
-    </>
-  );
-};
+//   return (
+//     <>
+//       <div className="post__hero">
+//         <Link href="/blog">
+//           <a className="arrow">
+//             <img src="/img/arrow-left.svg" alt="arrow left" />
+//           </a>
+//         </Link>
+//         <div className="post__hero--container">
+//           <h1>{post.title}</h1>
+//         </div>
+//       </div>
+//       <div
+//         className="post"
+//         dangerouslySetInnerHTML={{ __html: post.html }}
+//       ></div>
+//     </>
+//   );
+// };
 
-export default Post;
+// export default Post;
+export default {};
