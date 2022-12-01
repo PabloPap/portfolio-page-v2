@@ -91,4 +91,4 @@
 // };
 
 // export default Blog;
-export default {};
+export default () => <></>;
