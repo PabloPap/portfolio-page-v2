@@ -62,7 +62,7 @@ const Home = () => {
             <div className="projects__card">
               <a
                 aria-label="project"
-                href="https://time-machine-app.herokuapp.com/"
+                href="https://time-machine-app.netlify.app/"
               >
                 <div className="projects__card--img two"></div>
                 <div className="projects__card--hover"></div>
@@ -87,7 +87,7 @@ const Home = () => {
             <div className="projects__card">
               <a
                 aria-label="project"
-                href="https://video-finder-app.herokuapp.com/"
+                href="https://github.com/PabloPap/video-finder-app/"
               >
                 <div className="projects__card--img three"></div>
                 <div className="projects__card--hover"></div>
