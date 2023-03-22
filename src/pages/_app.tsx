@@ -1,8 +1,8 @@
-import Footer from '../components/footer';
-import Header from '../components/header';
+import Footer from '../common/components/footer';
+import Header from '../common/components/header';
 import ScrollToTop from 'react-scroll-up';
 import { DefaultSeo } from 'next-seo';
-import SEO from '../next-seo.config';
+// import SEO from '../next-seo.config';
 import '../site.scss';
 import ErrorBoundary from '../components/ErrorBoundary';
 
@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
     <ErrorBoundary>
       <div className="container">
         <Header />
-        <DefaultSeo {...SEO} />
+        {/* <DefaultSeo {...SEO} /> */}
         <Component {...pageProps} />
         <Footer />
         <ScrollToTop

@@ -26,9 +26,9 @@
     }
 
     &--par {
-      @include fluid-type(25px, 40px);
+      @include fluid-type(23px, 40px);
       font-family: $font-alata;
-      line-height: 1.7;
+      line-height: 1.5;
       font-weight: 400;
       color: $color-bw--7;
     }
