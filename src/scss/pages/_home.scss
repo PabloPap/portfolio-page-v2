@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 
   @include respond(big-laptop) {
     height: calc(100vh - 112px);
@@ -100,7 +100,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
 
   &__nav {
     display: flex;
@@ -161,15 +161,15 @@
 
   &__container {
     @include respond(phone) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: block;
+      // flex-direction: column;
+      // align-items: center;
       margin-bottom: 3rem;
       // grid-gap: 3rem;
     }
-    @include respond(laptop) {
-      display: block;
-    }
+    // @include respond(laptop) {
+    //   display: block;
+    // }
 
     @include respond(big-laptop) {
       display: grid;
