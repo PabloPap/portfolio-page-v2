@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      {/* <div className="container__side--header"></div> */}
+      <div className="container__side--header"></div>
 
       <header className="header">
         <nav className="header__nav">
